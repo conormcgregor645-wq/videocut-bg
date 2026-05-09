@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VideoCut BG - удалить фон у видео</title>
+    <meta
+      name="description"
+      content="Сервис для удаления фона у видео: загрузите ролик, проверьте результат и получите готовый файл за несколько минут."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topline">
+      <a class="logo" href="#top" aria-label="VideoCut BG">
+        <span>VC</span>
+        VideoCut BG
+      </a>
+      <nav data-i18n-aria="navAria" aria-label="Разделы">
+        <a href="#demo" data-i18n="navDemo">Демо</a>
+        <a href="#audience" data-i18n="navAudience">Для кого</a>
+        <a href="#workflow" data-i18n="navWorkflow">Как работает</a>
+        <a href="#pricing" data-i18n="navPricing">Цена</a>
+        <a href="#waitlist" data-i18n="navWaitlist">Ранний доступ</a>
+        <a href="#faq" data-i18n="navFaq">Вопросы</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switch">
+          <button class="lang-button active" type="button" data-lang="ru">RU</button>
+          <button class="lang-button" type="button" data-lang="en">EN</button>
+        </div>
+        <a class="top-cta" href="#waitlist" data-i18n="joinEarly" data-track="cta_header">Ранний доступ</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="heroKicker">Малый сервис для одной боли</p>
+          <h1 data-i18n="heroTitle">Удаляй фон у видео без монтажера.</h1>
+          <p class="sub" data-i18n="heroSubtitle">
+            Загрузи ролик, получи чистый объект на прозрачном, цветном или фирменном фоне.
+            Для рекламы, коротких видео, карточек товара и сайтов.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo" data-i18n="watchDemo" data-track="cta_watch_demo">Смотреть демо</a>
+            <a class="button secondary" href="#waitlist" data-i18n="getEarlyAccess" data-track="cta_hero_access">Получить ранний доступ</a>
+          </div>
+          <dl class="proof">
+            <div>
+              <dt data-i18n="metricTimeValue">7 мин</dt>
+              <dd data-i18n="metricTimeLabel">среднее время</dd>
+            </div>
+            <div>
+              <dt>1080p</dt>
+              <dd data-i18n="metricQualityLabel">качество файла</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd data-i18n="metricSettingsLabel">сложных настроек</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="preview" data-i18n-aria="previewAria" aria-label="Интерфейс удаления фона">
+          <div class="window">
+            <div class="window-head">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>background-removal.mp4</strong>
+            </div>
+            <div class="canvas">
+              <div class="before">
+                <span data-i18n="beforeLabel">До</span>
+                <div class="subject"></div>
+              </div>
+              <div class="after">
+                <span data-i18n="afterLabel">После</span>
+                <div class="subject clean"></div>
+              </div>
+              <div class="split-line" aria-hidden="true"></div>
+            </div>
+            <div class="status">
+              <span data-i18n="frameCleaning">Очистка кадра</span>
+              <div class="bar"><i></i></div>
+              <b>96%</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem">
+        <p data-i18n="problemKicker">Проблема</p>
+        <h2 data-i18n="problemTitle">Автору нужен готовый ролик, а не еще один видеоредактор.</h2>
+        <div class="problem-grid">
+          <article>
+            <span>01</span>
+            <strong data-i18n="problemOneTitle">Монтаж занимает вечер</strong>
+            <p data-i18n="problemOneText">Даже простая маска превращается в ручную работу, особенно если роликов много.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong data-i18n="problemTwoTitle">Инструменты с ИИ слишком общие</strong>
+            <p data-i18n="problemTwoText">Они умеют все понемногу, но не дают один быстрый и понятный результат.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong data-i18n="problemThreeTitle">Готовый файл теряет качество</strong>
+            <p data-i18n="problemThreeText">Нужен чистый результат в понятном виде: прозрачный фон, цвет или фирменная сцена.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo" id="demo">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="demoKicker">Демо</p>
+          <h2 data-i18n="demoTitle">Выбери результат. Остальное делает сервис.</h2>
+        </div>
+        <div class="demo-panel">
+          <div class="mode-tabs" role="tablist" data-i18n-aria="modeAria" aria-label="Формат результата">
+            <button class="mode active" type="button" data-mode="transparent" data-i18n="modeTransparent">Прозрачный фон</button>
+            <button class="mode" type="button" data-mode="brand" data-i18n="modeBrand">Цвет бренда</button>
+            <button class="mode" type="button" data-mode="social" data-i18n="modeSocial">Ролик для соцсетей</button>
+          </div>
+          <div class="upload-demo" data-i18n-aria="uploadAria" aria-label="Демо загрузки видео">
+            <div class="upload-drop">
+              <input id="videoUpload" type="file" accept="video/*">
+              <label for="videoUpload">
+                <span data-i18n="uploadButton">Загрузить видео</span>
+                <strong id="fileName" data-i18n="chooseFile">Выбери MP4 или MOV</strong>
+              </label>
+            </div>
+            <div class="process-card" aria-live="polite">
+              <div class="process-head">
+                <span id="processLabel" data-i18n="waitingFile">Ждет файл</span>
+                <b id="processPercent">0%</b>
+              </div>
+              <div class="process-bar"><i id="processFill"></i></div>
+              <ol class="process-steps">
+                <li class="step active" id="stepUpload" data-i18n="stepUpload">Загрузка</li>
+                <li class="step" id="stepMask" data-i18n="stepMask">Поиск объекта</li>
+                <li class="step" id="stepClean" data-i18n="stepClean">Очистка краев</li>
+                <li class="step" id="stepExport" data-i18n="stepExport">Подготовка файла</li>
+              </ol>
+            </div>
+          </div>
+          <div class="demo-screen" id="demoScreen">
+            <div class="subject clean large"></div>
+            <div class="demo-copy">
+              <span id="modeLabel">Файл с прозрачным фоном</span>
+              <strong id="modeTitle">Объект без фона</strong>
+              <p id="modeText">Для вставки в сайт, презентацию, редактор или ролик о продукте.</p>
+              <div class="result-actions" id="resultActions" hidden>
+                <button class="mini-button" id="getRealExport" type="button" data-i18n="getRealFile" data-track="cta_real_file">Получить настоящий файл</button>
+                <button class="mini-button ghost" id="copyLink" type="button" data-i18n="copyLink" data-track="copy_demo_link">Скопировать ссылку</button>
+              </div>
+            </div>
+          </div>
+          <div class="sample-preview" id="samplePreview" hidden>
+            <div class="sample-video" aria-hidden="true">
+              <div class="sample-subject"></div>
+              <div class="sample-badge" data-i18n="sampleBadge">Пример результата</div>
+            </div>
+            <div class="sample-copy">
+              <span data-i18n="sampleKicker">Проверка результата</span>
+              <strong id="sampleTitle">Прозрачный фон готов</strong>
+              <p id="sampleText">
+                В демо мы показываем ожидаемый результат. Настоящий видеофайл доступен через ранний доступ.
+              </p>
+            </div>
+          </div>
+          <div class="history" id="history" data-i18n-aria="historyAria" aria-label="История обработок" hidden>
+            <div class="history-head">
+              <span data-i18n="historyTitle">История обработки</span>
+              <b data-i18n="historyLatest">Последние файлы</b>
+            </div>
+            <div class="history-list" id="historyList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience" id="audience">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="audienceKicker">Для кого</p>
+          <h2 data-i18n="audienceTitle">Не для всех. Для тех, кому нужен чистый ролик сегодня.</h2>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <span data-i18n="audienceOneLabel">Авторы</span>
+            <h3 data-i18n="audienceOneTitle">Короткие видео и уроки</h3>
+            <p data-i18n="audienceOneText">Быстро отделить человека или товар от фона и вставить в готовый формат.</p>
+          </article>
+          <article>
+            <span data-i18n="audienceTwoLabel">Маркетологи</span>
+            <h3 data-i18n="audienceTwoTitle">Реклама и карточки товара</h3>
+            <p data-i18n="audienceTwoText">Собрать несколько вариантов под разные кампании без очереди к дизайнеру или монтажеру.</p>
+          </article>
+          <article>
+            <span data-i18n="audienceThreeLabel">Основатели</span>
+            <h3 data-i18n="audienceThreeTitle">Демо для сайта</h3>
+            <p data-i18n="audienceThreeText">Показать продукт на сайте, в презентации или запуске, даже если видеокоманды еще нет.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="outputs">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="outputsKicker">Что получится</p>
+          <h2 data-i18n="outputsTitle">На выходе не магия ИИ, а конкретные файлы.</h2>
+        </div>
+        <div class="output-grid">
+          <article>
+            <strong data-i18n="outputOneTitle">Видео с прозрачным фоном</strong>
+            <p data-i18n="outputOneText">Для монтажа, презентаций и сайтов.</p>
+          </article>
+          <article>
+            <strong data-i18n="outputTwoTitle">Видео с цветным фоном</strong>
+            <p data-i18n="outputTwoText">Для быстрых роликов в цветах бренда.</p>
+          </article>
+          <article>
+            <strong data-i18n="outputThreeTitle">Вертикальный ролик</strong>
+            <p data-i18n="outputThreeText">Для соцсетей и рекламы.</p>
+          </article>
+          <article>
+            <strong data-i18n="outputFourTitle">Ссылка для просмотра</strong>
+            <p data-i18n="outputFourText">Для согласования результата с командой.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="workflowKicker">Как работает</p>
+          <h2 data-i18n="workflowTitle">Три шага вместо сложного видеопроцесса.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3 data-i18n="workflowOneTitle">Загрузи видео</h3>
+            <p data-i18n="workflowOneText">Перетащи ролик до 3 минут. Сервис сам найдет объект и начнет обработку.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3 data-i18n="workflowTwoTitle">Проверь маску</h3>
+            <p data-i18n="workflowTwoText">Посмотри ключевые кадры. Если нужно, поправь край одним ползунком.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3 data-i18n="workflowThreeTitle">Скачай файл</h3>
+            <p data-i18n="workflowThreeText">Получи видео с прозрачным фоном, цветным фоном или готовый ролик для соцсетей.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="price-copy">
+          <p class="kicker" data-i18n="pricingKicker">Цена</p>
+          <h2 data-i18n="pricingTitle">Одна задача. Одна подписка.</h2>
+          <p data-i18n="pricingText">
+            Без большого пакета лишних функций, без сложного обучения и без десятков настроек.
+          </p>
+        </div>
+        <div class="price-card">
+          <span data-i18n="planName">Для автора</span>
+          <strong>$9</strong>
+          <p data-i18n="perMonth">в месяц</p>
+          <ul>
+            <li data-i18n="planOne">30 видео в месяц</li>
+            <li data-i18n="planTwo">качество 1080p</li>
+            <li data-i18n="planThree">прозрачный фон, цветной фон, формат для соцсетей</li>
+            <li data-i18n="planFour">история обработок 14 дней</li>
+          </ul>
+          <a class="button primary" href="#waitlist" data-i18n="joinEarly" data-track="cta_pricing">Ранний доступ</a>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="trustKicker">Первые сигналы</p>
+          <h2 data-i18n="trustTitle">Такой продукт легко проверить разговорами и заявками.</h2>
+        </div>
+        <div class="quotes">
+          <figure>
+            <blockquote data-i18n="quoteOne">“Мне не нужен редактор. Мне нужно 12 чистых роликов для рекламы до завтра.”</blockquote>
+            <figcaption data-i18n="quoteOneAuthor">Маркетолог, бренд товаров</figcaption>
+          </figure>
+          <figure>
+            <blockquote data-i18n="quoteTwo">“Если это стабильно работает с волосами и руками, я буду платить сразу.”</blockquote>
+            <figcaption data-i18n="quoteTwoAuthor">Автор обучающего канала</figcaption>
+          </figure>
+          <figure>
+            <blockquote data-i18n="quoteThree">“Главная ценность не в ИИ, а в том, что человек не тратит полдня на маски.”</blockquote>
+            <figcaption data-i18n="quoteThreeAuthor">Основатель сервиса</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="limits">
+        <div>
+          <p class="kicker" data-i18n="limitsKicker">Что не делает</p>
+          <h2 data-i18n="limitsTitle">Это не видеоредактор.</h2>
+        </div>
+        <ul>
+          <li data-i18n="limitOne">Не монтирует ролики по дорожкам.</li>
+          <li data-i18n="limitTwo">Не пишет сценарии и не делает озвучку.</li>
+          <li data-i18n="limitThree">Не заменяет профессиональные программы для монтажа.</li>
+          <li data-i18n="limitFour">Не хранит файлы дольше срока тарифа.</li>
+        </ul>
+      </section>
+
+      <section class="waitlist" id="waitlist">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="waitlistKicker">Ранний доступ</p>
+          <h2 data-i18n="waitlistTitle">Собери первые заявки до разработки продукта.</h2>
+          <p data-i18n="waitlistText">
+            Форма работает локально: после отправки скопирует заявку и откроет Telegram.
+            Напиши сообщение в чат, чтобы попасть в ранний доступ.
+          </p>
+        </div>
+        <form class="waitlist-form" id="waitlistForm">
+          <label>
+            <span data-i18n="emailLabel">Почта</span>
+            <input id="email" name="email" type="email" placeholder="you@company.com" required>
+          </label>
+          <label>
+            <span data-i18n="useCaseLabel">Какие видео хочешь обрабатывать?</span>
+            <select id="useCase" name="useCase" required>
+              <option value="" data-i18n="useCasePlaceholder">Выбери сценарий</option>
+              <option data-i18n="useCaseAds">Реклама</option>
+              <option data-i18n="useCaseShorts">Короткие видео для соцсетей</option>
+              <option data-i18n="useCaseProduct">Карточки товара</option>
+              <option data-i18n="useCaseEducation">Обучающие видео</option>
+              <option data-i18n="useCaseOther">Другое</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="painLabel">Что сейчас болит сильнее всего?</span>
+            <textarea id="pain" name="pain" rows="4" data-i18n-placeholder="painPlaceholder" placeholder="Например: долго чистить фон, плохие края, нет быстрого готового файла"></textarea>
+          </label>
+          <button class="button primary" type="submit" data-i18n="joinEarly" data-track="form_submit_click">Ранний доступ</button>
+          <a class="telegram-link" href="https://t.me/mellstroymarket" target="_blank" rel="noreferrer" data-i18n="telegramDirect" data-track="telegram_direct">
+            Написать напрямую: @mellstroymarket
+          </a>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+
+      <div class="modal" id="exportModal" hidden>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="exportModalTitle">
+          <button class="modal-close" id="closeModal" type="button" data-i18n-aria="closeAria" aria-label="Закрыть">x</button>
+          <span data-i18n="modalKicker">Настоящий файл</span>
+          <h2 id="exportModalTitle" data-i18n="modalTitle">Настоящий видеофайл доступен в раннем доступе.</h2>
+          <p data-i18n="modalText">
+            Сейчас это честное демо: оно показывает сценарий обработки и пример результата,
+            но не создает настоящий MP4. Напиши в Telegram, чтобы получить ранний доступ.
+          </p>
+          <div class="modal-actions">
+            <a class="button primary" href="https://t.me/mellstroymarket" target="_blank" rel="noreferrer" data-i18n="telegramButton" data-track="telegram_modal">
+              Написать в Telegram
+            </a>
+            <a class="button secondary" href="#waitlist" id="modalWaitlist" data-i18n="fillForm" data-track="modal_to_form">Заполнить форму</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="faq" id="faq">
+        <div class="section-copy">
+          <p class="kicker" data-i18n="faqKicker">Вопросы</p>
+          <h2 data-i18n="faqTitle">Коротко и по делу.</h2>
+        </div>
+        <div class="qa">
+          <details open>
+            <summary data-i18n="faqOneQuestion">Это полноценный видеоредактор?</summary>
+            <p data-i18n="faqOneAnswer">Нет. VideoCut BG делает одну вещь: удаляет фон у видео и отдает готовый файл.</p>
+          </details>
+          <details>
+            <summary data-i18n="faqTwoQuestion">Можно ли использовать для рекламы?</summary>
+            <p data-i18n="faqTwoAnswer">Да. Есть формат для вертикальных роликов с безопасными отступами и цветным фоном.</p>
+          </details>
+          <details>
+            <summary data-i18n="faqThreeQuestion">Что если маска ошиблась?</summary>
+            <p data-i18n="faqThreeAnswer">Можно проверить ключевые кадры и поправить край маски перед созданием файла.</p>
+          </details>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
